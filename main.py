@@ -1,10 +1,10 @@
 from machine import Pin
 from time import sleep
 
-led = Pin(2, Pin.OUT)  # GPIO 2 é o LED interno na maioria dos ESP32
-
-while True:
+led = Pin(2, Pin.OUT)
+for _ in range(10):
     led.on()
     sleep(0.25)
     led.off()
     sleep(0.5)
+raise SystemExit
