@@ -1,6 +1,10 @@
-from ota import OTAUpdater
-from secrets import SSID, PASSWORD
+from machine import Pin
+from time import sleep
 
-firmware_url = "https://github.com/maiconDuarte/IoT_OTA/main"
-ota_updater = OTAUpdater(secrets.SSID, secrets.PASSWORD, firmware_url, "iot_main.py")
-ota_updater.download_and_install_update_if_available()
+led = Pin(2, Pin.OUT)  # GPIO 2 é o LED interno na maioria dos ESP32
+
+while True:
+    led.on()
+    sleep(0.5)
+    led.off()
+    sleep(0.5)
