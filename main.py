@@ -75,7 +75,7 @@ def conectar_e_inscrever():
 
 conectar_e_inscrever()
 
-sensor = Pin(13, Pin.IN, Pin.PULL_UP)
+sensor = Pin(2, Pin.IN, Pin.PULL_UP)
 sensor.irq(trigger=Pin.IRQ_FALLING, handler=vib_detectada)
 
 while True:
