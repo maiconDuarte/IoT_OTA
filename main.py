@@ -6,7 +6,7 @@ from neopixel import NeoPixel
 
 rgb = NeoPixel(Pin(21), 1)
 
-cor_atual = (0, 0, 255)
+cor_atual = (0, 255, 0)
 
 def led_on():
     rgb[0] = cor_atual
